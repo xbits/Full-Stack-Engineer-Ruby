@@ -1,0 +1,142 @@
+// Variables
+@nav-bar-height: 160px; // sea blue
+@nav-bar-zindex: 10;
+@body-color: #fff;
+@body-bg-color: #1D1D1D;
+@inverted-color: #333;
+@inverted-bg-color: #FEF;
+
+@import 'rig';
+@import "modal-dialog";
+@import "upvotes";
+//@import 'ember-power-select';
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.2em;
+  margin-left: 2em;
+  color: @body-color;
+  background-color: @body-bg-color;
+  padding-top: @nav-bar-height;
+}
+
+//--------------general elements----------------------------------
+
+//Make all ember action enabled elements have a clickable cursor
+// not sure if it is safe...
+[data-ember-action]{
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.text-center{
+  text-align: center;
+}
+form{
+  label{
+    font-size: 0.8em;
+    color: darken(@body-color,20%);
+    text-transform: capitalize;
+  }
+}
+
+//---------------nav-bar component--------------
+.nav-bar{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  height: @nav-bar-height;
+  z-index: @nav-bar-zindex;
+  background-color: rgba(255,2,16,0.9);
+  .marvel-logo-container{
+    width:160px;
+    margin:20px;
+    margin-left: auto;
+    margin-right: auto;
+   // margin-bottom: 5px;
+  }
+  .marvel-logo{
+    box-sizing: border-box;
+    width:100%;
+  }
+  .nav-bar-form{
+    width:100%;
+    box-sizing: border-box;
+  }
+
+  .auth-controls{
+    position: absolute;
+    right: 2em;
+    top: 1em;
+    font-size: 0.6em;
+    color:#EAA;
+    text-align: right;
+  }
+}//end nav bar
+
+
+
+
+.character-search-container{
+  width:25%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:-18px;
+  .form-label{
+    min-height: 1em;
+  }
+}
+// -----------Power select patch-----------
+.ember-power-select {
+  color:#111;
+}
+.ember-power-select-trigger {
+  color:#111;
+}
+.ember-power-select-option {
+  color: #111;
+}
+// -----------end power select patch
+
+.loading-page{
+  position:absolute;
+  top:0;
+  bottom: 0;
+  left:0;
+  right:0;
+  background-image: url("/images/marvel_loader.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  color:#FFF;
+  padding-top: @nav-bar-height;
+}
+
+.infinity-loader{
+  text-align: center;
+}
+
+//---------------comic show-----------------
+.comic-show{
+  width:100%;
+  .left-column, .right-column{
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+    display: inline-block;
+    padding:20px;
+  }
+  .left-column{
+    width:60%;
+    float:left;
+  }
+  .right-column{
+    width:40%;
+    float:right;
+  }
+}
+

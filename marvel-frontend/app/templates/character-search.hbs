@@ -1,0 +1,10 @@
+<div class="character-search-container">
+    <div class="form-label">
+      {{#if selectedCharacter}}
+          Comics featuring
+      {{/if}}
+    </div>
+  {{#power-select placeholder="Filter by character" allowClear=true selected=selectedCharacter search=(action "searchCharacters") searchField='name' onchange=(action "filterByCharacter") as |char|}}
+    {{char.name}}
+  {{/power-select}}
+</div>

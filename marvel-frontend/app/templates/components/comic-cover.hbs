@@ -1,0 +1,12 @@
+<div class="rig-cell">
+    {{#link-to 'comic' comic}}
+
+    <img src={{ marvel-image-path comic.thumbnail}} alt="Logo" class="rig-img">
+    <span class="rig-overlay"></span>
+    <div class="top-right-widget">
+      {{upvote-icon upvotable=comic}}
+    </div>
+    <strong class="rig-text">{{comic.title}}</strong><br><br>
+
+    {{/link-to}}
+</div>

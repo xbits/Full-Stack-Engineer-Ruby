@@ -1,0 +1,11 @@
+<div class="auth-controls">
+  {{#if session.isAuthenticated}}
+    {{#if currentUser.user}}
+        Signed in as {{currentUser.user.email}}
+        <br/>
+    {{/if}}
+      <span {{action 'logout'}}>Logout</span>
+  {{else}}
+      <span {{action 'openLogin'}}>Login</span>
+  {{/if}}
+</div>

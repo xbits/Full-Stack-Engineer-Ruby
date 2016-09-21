@@ -1,0 +1,11 @@
+<div class="nav-bar">
+    {{auth-controls}}
+  <div class="marvel-logo-container">
+  {{#link-to 'application'}}
+      <img class='marvel-logo' src="/images/marvel_logo.png"/>
+  {{/link-to}}
+  </div>
+  <div class='nav-form'>
+    {{outlet 'nav-form'}}
+  </div>
+</div>

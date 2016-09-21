@@ -1,0 +1,8 @@
+<ul class="comics-grid rig">
+    {{#each model as |comic|}}
+      {{comic-cover comic=comic}}
+    {{/each}}
+</ul>
+{{#infinity-loader infinityModel=model}}
+  <h4>loading more comics...</h4>
+{{/infinity-loader}}

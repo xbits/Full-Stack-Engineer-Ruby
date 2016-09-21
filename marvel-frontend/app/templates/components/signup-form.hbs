@@ -1,0 +1,32 @@
+<form class='text-center' {{action "submit" on="submit"}} autofocus>
+    <p>
+      <label for="name">Username</label>
+      <br/>
+      {{input value=user.username placeholder="enter name"}}
+    </p>
+    <p>
+      <label for="email">Email</label>
+      <br/>
+      {{input value=user.email placeholder="enter Email"}}
+    </p>
+    <p>
+      <label for="password">Password</label>
+      <br/>
+      {{input value=user.password type="password" placeholder="enter password"}}
+    </p>
+    <p>
+      <label for="passwordConfirmation">Password Confirmation</label>
+      <br/>
+      {{input value=user.passwordConfirmation type="password" placeholder="enter password again"}}
+    </p>
+    <button type="submit">Login</button>
+</form>
+<div class="messages">
+  {{#if signUpMessage}}
+    {{signUpMessage}}
+  {{/if}}
+    <br/>
+  {{#if signUpError}}
+    {{signUpError}}
+  {{/if}}
+</div>

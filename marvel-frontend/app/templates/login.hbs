@@ -1,0 +1,22 @@
+<h3>Login to your account.</h3>
+<form class='login-form' {{action 'authenticate' on='submit'}}>
+  <p>
+    <label for="identification">Email</label>
+    <br/>
+    {{input id='identification' placeholder='Enter Email' value=identification required='true' type='email'}}
+  </p>
+  <p>
+    <label for="password">Password</label>
+    <br/>
+    {{input id='password' placeholder='Enter Password' type='password' value=password required='true'}}
+  </p>
+  <button type="submit" >Login</button>
+  <br/>
+  <small>or</small>
+  <br/>
+      <span {{action 'goToSignup'}}>Create new account</span>
+  <br/>
+  {{#if errorMessage}}
+      <p>{{errorMessage}}</p>
+  {{/if}}
+</form>

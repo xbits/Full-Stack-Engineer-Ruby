@@ -1,0 +1,36 @@
+//upvote widget
+
+.upvote-widget{
+    text-align: center;
+    .upvote-icon{
+      width: 30px;
+      height:28px;
+      background-image: url("/images/heart_off.png");
+      background-size: 30px 30px;
+      background-repeat: no-repeat;
+      margin-left: auto;
+      margin-right: auto;
+      transition:all .5s;
+      background-position: center center;
+      &.upvoted{
+        background-image: url("/images/heart_on_fit.png");
+        width: 36px;
+        height:30px;
+      }
+      &:hover{
+        background-image: url("/images/heart_hover.png");
+      }
+
+    }
+  .extra-info{
+    opacity:0;
+    filter:alpha(opacity=0);/*For IE6 - IE8*/
+    transition:all 0.4s;
+  }
+  &:hover{
+    .extra-info{
+      opacity:1;
+    }
+  }
+
+}

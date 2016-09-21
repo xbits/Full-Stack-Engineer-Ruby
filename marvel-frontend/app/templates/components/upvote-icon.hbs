@@ -1,0 +1,7 @@
+<div class="upvote-widget" title="Total upvotes {{upvotable.totalUpvotes}}">
+    <div class="upvote-icon {{if upvotable.upvoted 'upvoted'}}" title="{{if upvotable.upvoted 'Upvoted' 'Click to upvote'}}" {{action 'toggleUpvote' bubbles=false}}>
+    </div>
+  {{upvotable.totalUpvotes}}
+    <br/><span class="extra-info">upvotes</span>
+</div>
+

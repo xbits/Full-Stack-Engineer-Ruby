@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  upvotable_type: 'comic'
+  upvotable_id: 1
+  user_id: 1
+
+two:
+  upvotable_type: 'comic'
+  upvotable_id: 999
+  user_id: 1

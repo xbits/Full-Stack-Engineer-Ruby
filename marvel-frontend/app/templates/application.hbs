@@ -1,0 +1,14 @@
+{{!-- app/templates/application.hbs --}}
+{{nav-bar}}
+
+<div class="{{if blur 'blur-background' ''}}">
+  {{outlet}}
+</div>
+
+{{#if isModalOpen}}
+  {{#modal-dialog close="closeModal" clickOutsideToClose=true translucentOverlay=true }}
+    {{modalMessage}}
+    {{outlet 'mainModal'}}
+  {{/modal-dialog}}
+{{/if}}
+
