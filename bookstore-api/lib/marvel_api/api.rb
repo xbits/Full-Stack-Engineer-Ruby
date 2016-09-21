@@ -5,7 +5,6 @@ module MarvelApi
 
 
     def self.get_remote path, params = {}
-      puts "PARAMS ARE #{params.to_yaml}"
       params ||= {}
       params = params.delete_if { |k, v| v.blank? } # clear nil params
       res = HTTP.get("#{Rails.configuration.marvel_gateway}/#{path}", params: marvel_keys.merge(params))
