@@ -11,12 +11,14 @@ class Marvel::ComicsController < Marvel::MarvelController
 
   # GET /comics/1
   def show
-    @comic = MarvelApi::API.get_remote_data "comics/#{params.delete(:id)}",params: params_for_marvel
+    remote_params = params_for_marvel
+    @comic = MarvelApi::API.get_remote_data "comics/#{remote_params.delete(:id)}",params: remote_params
     append_upvotes @comic
     render json: @comic
   end
 
   private
+
   def append_upvotes data
     return unless data['data'] && data['data']['results']
     data['data']['results'].each do |c|
